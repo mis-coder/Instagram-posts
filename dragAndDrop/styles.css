@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+.draggable-elements{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle, .circle-space{
+    height: 100px;
+    width: 100px;
+}
+
+.circle{
+    cursor: move;
+    border-radius: 100%;
+    transition: opacity 0.3s;
+}
+
+.circle:hover{
+    opacity: 0.5;
+}
+
+.circle.dragged{
+    cursor: default;
+    opacity: 0.1;
+}
+
+.circle:first-child{
+    background-color: red ;
+}
+
+.circle:nth-child(2){
+    background-color: blue ;
+}
+
+.circle:nth-child(3){
+    background-color: yellow;
+}
+.circle:nth-child(4){
+    background-color: green ;
+}
+
+.droppable-elements{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+.circle-space{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    border: 1px dashed;
+    background-color: #ffffff;
+}
+
+.circle-space.dropped{
+border: none;
+animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.circle-space.droppable-hover{
+    border-width: 3px;
+}
+
+.circle-space span{
+    pointer-events: none;
+}
+
+.circle-space:first-child span{
+    color: yellow ;
+}
+
+.circle-space:nth-child(2) span{
+    color: green;
+}
+
+.circle-space:nth-child(3) span{
+    color: blue ;
+}
+
+.circle-space:nth-child(4) span{
+    color: red ;
+}

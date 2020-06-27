@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    background: url('./img/abstract-background-carpentry-construction-268976.jpg') center no-repeat fixed;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh + var(--x)/8);
+    width: calc(100% + var(--y)/2);
+}
+
+.grid{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-gap: 20px;
+}
+
+.grid-item{
+   position: relative;
+   border-radius: 30px;
+   box-shadow: 10px 20px 15px 0 rgba(0,0,0,0.8);
+   height: 180px;
+   width: 180px;
+}
+
+.grid-item:hover{
+   cursor: pointer;
+   background-color: rgb(214, 16, 49);
+}
+
+.grid-item:hover img{
+    opacity: 0;
+    transition: opacity ease-out;
+}
+
+.grid-item img{
+     height: 100%;
+     width: 100%;
+    border-radius: inherit;
+}
+
+.grid-item p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+    transform: translate(70px, 140px);
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.grid-item:hover p{
+    opacity: 1;
+    transition: all ease-in;
+}
