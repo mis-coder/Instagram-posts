@@ -1,0 +1,108 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 5em;
+   background-color: #6933fd69;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.btn{
+   margin: 1em auto;
+   padding: 1em 2em;
+   border: 0;
+   background-color: rgb(93, 82, 253);
+   color: #ffffff;
+   font-size: 1em;
+   cursor: pointer;
+}
+
+ .move-tail{
+   animation: movetail 0.5s ease-in-out infinite;
+   transform-origin: bottom;
+   -moz-transform-origin: bottom;
+}
+
+@keyframes movetail{
+  from{
+      transform: rotateX(60deg);
+  }
+  to{
+     transform: rotateX(-60deg);
+  }
+}
+
+.move-right-eye{
+   animation: moverighteye 0.8s infinite;
+   transform-origin: 9.1em 9.2em ;
+   -moz-transform-origin: 9.1em 9.2em;
+}
+
+@keyframes moverighteye{
+   from{
+      transform: rotate(0deg);
+   }
+   to{
+      transform: rotate(360deg);
+   }
+}
+
+.move-left-eye{
+   animation: movelefteye 0.8s infinite;
+   transform-origin: 12.1em 9.2em ;
+   -moz-transform-origin: 12.1em 9.2em;
+}
+
+@keyframes movelefteye{
+   from{
+      transform: rotate(360deg);
+   }
+   to{
+      transform: rotate(0deg);
+   }
+}
+
+.move-right-ear{
+   transform: rotate(135deg);
+   transform-origin: 7.5em 6.7em;
+   -moz-transform-origin: 7.5em 6.7em;
+} 
+
+ .move-left-ear{
+   transform: rotate(-135deg);
+   transform-origin: 13.75em 6.7em;
+   -moz-transform-origin: 13.75em 6.7em;
+}
+
+.roll-body{
+   animation: rollbody 1s ease-in-out infinite;
+   animation-direction: alternate;
+   transform-origin: center;
+   -moz-transform-origin: center;
+}
+
+@keyframes rollbody{
+   0%{
+      transform: rotate(-100deg);
+   }
+   100%{
+      transform: rotate(-210deg);
+   }
+
+} 
+
+
+
+
