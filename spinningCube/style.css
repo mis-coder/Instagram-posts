@@ -1,0 +1,88 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #fafafa;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinning-cube{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    margin-top: 200px;
+    animation: spin 12s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+}
+
+.spinning-cube .face{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+.spinning-cube .face:not(.one){
+  opacity: 0.9;
+}
+ .spinning-cube .face.one{
+   background: url('./images/new_logo.png') center;
+    transform: translateZ(100px);
+}
+
+.spinning-cube .face.two{
+  background: url('./images/html.png') center;
+    transform:rotateY(90deg) translateZ(100px);
+}
+
+.spinning-cube .face.three{
+  background: url('./images/css.png') center;
+    transform:rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+
+.spinning-cube .face.four{
+  background: url('./images/javascript.png') center;
+    transform:rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+
+.spinning-cube .face.five{
+  background: url('./images/github.png') center;
+    transform:rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+
+.spinning-cube .face.six{
+  background: url('./images/coding-girl.png') center;
+    transform:rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes spin {
+    from,to {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16% {
+      transform: rotateY(-90deg);
+    }
+    33% {
+      transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+      transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+      transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83% {
+      transform: rotateX(90deg);
+    }
+  }
