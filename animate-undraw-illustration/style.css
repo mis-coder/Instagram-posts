@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+}
+
+.color-palette {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.color {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.color:hover {
+  opacity: 0.5;
+}
+
+.color:active {
+  transform: scale(0.9);
+}
+
+.mic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+.mic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.mic p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#CapA,
+#smallA {
+  opacity: 0;
+  transform: scale(0);
+}
+
+#CapA {
+  animation: capitalA 1s forwards;
+}
+
+@keyframes capitalA {
+  from {
+    opacity: 0;
+    transform-origin: 20% 100%;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#smallA {
+  animation: smallA 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes smallA {
+  from {
+    opacity: 0;
+    transform-origin: 40% 100%;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#dot1,
+#dot2,
+#dot3 {
+  opacity: 0;
+  animation: dots 0.6s forwards;
+}
+
+@keyframes dots {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#dot1 {
+  animation-delay: 2s;
+}
+
+#dot2 {
+  animation-delay: 2.6s;
+}
+
+#dot3 {
+  animation-delay: 3.2s;
+}
+
+#body {
+  opacity: 0;
+  animation: animateBody 1s forwards;
+  transform: translateX(-45px);
+  animation-delay: 3.8s;
+}
+
+@keyframes animateBody {
+  from {
+    opacity: 0;
+    transform: translateX(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
