@@ -1,0 +1,99 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 100px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+nav {
+  height: 100vh;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.fas {
+  font-size: 40px;
+  color: #fff;
+  padding: 20px 0;
+}
+
+nav ul {
+  text-align: center;
+}
+
+nav ul li {
+  position: relative;
+  width: 80px;
+  cursor: pointer;
+  background: rgb(59, 6, 158);
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+}
+
+nav ul li::after {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  top: 0;
+  left: 80px;
+  width: 80px;
+  height: 100%;
+  transform: perspective(400px) rotateY(90deg);
+  transform-origin: 0 100%;
+  transition: all 0.5s ease-out;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+nav ul li:nth-child(1)::after {
+  content: "Home";
+  line-height: 88px;
+}
+
+nav ul li:nth-child(2)::after {
+  content: "about";
+  line-height: 86px;
+}
+
+nav ul li:nth-child(3)::after {
+  content: "work";
+  line-height: 80px;
+}
+
+nav ul li:nth-child(4)::after {
+  content: "contact";
+  line-height: 80px;
+}
+
+nav ul li:hover {
+  transform: translateX(-80px);
+}
+
+nav ul li:hover::after {
+  opacity: 1;
+  transform: perspective(400px) rotateY(0deg) scale(1);
+}
