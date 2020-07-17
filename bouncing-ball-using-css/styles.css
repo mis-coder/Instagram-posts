@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --ball-size: 200px;
-  --ball-img-size: calc(var(--ball-size) + 20px);
-}
-
 body {
   background-image: linear-gradient(75deg, #f0b27a 5%, #fdebd0 90%);
   background-size: 100%;
