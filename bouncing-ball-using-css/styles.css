@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ball-size: 200px;
+  --ball-img-size: calc(var(--ball-size) + 20px);
+}
+
+body {
+  background-image: linear-gradient(75deg, #f0b27a 5%, #fdebd0 90%);
+  background-size: 100%;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.smash {
+  animation: smash 1s alternate infinite ease-out;
+  transform-origin: bottom;
+}
+
+.shadow {
+  height: 190px;
+  width: 190px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.shadow {
+  animation: shadow 1s alternate infinite ease-out;
+}
+
+.ball {
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  background-image: url("img/football.png");
+  background-size: 100%;
+  animation: rotate 5.3s infinite linear;
+}
+
+@keyframes smash {
+  0% {
+    transform: scaleY(0.7);
+  }
+  15% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: translateY(0);
+    box-shadow: 20px 20px 10px #994d1a;
+  }
+
+  100% {
+    transform: translateY(-350px);
+    box-shadow: 20px 350px 200px #994d1a;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
