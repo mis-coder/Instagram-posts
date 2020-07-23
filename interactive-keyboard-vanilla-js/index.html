@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Interactive Keyboard</title>
+  </head>
+  <body>
+    <!-- the place where you will see the text -->
+    <div class="text-area">
+      <div class="text">Start Typing Here....</div>
+    </div>
+
+    <!-- Lets create our keyboard here---->
+
+    <!-- All the ids of keys correspond to their key code -->
+    <div class="container">
+      <div class="keyboard">
+        <div class="row-1 keyboard-row">
+          <kbd class="shift" id="192">`</kbd>
+          <kbd class="shift" id="49">1</kbd>
+          <kbd class="shift" id="50">2</kbd>
+          <kbd class="shift" id="51">3</kbd>
+          <kbd class="shift" id="52">4</kbd>
+          <kbd class="shift" id="53">5</kbd>
+          <kbd class="shift" id="54">6</kbd>
+          <kbd class="shift" id="55">7</kbd>
+          <kbd class="shift" id="56">8</kbd>
+          <kbd class="shift" id="57">9</kbd>
+          <kbd class="shift" id="48">0</kbd>
+          <kbd class="shift" id="189">-</kbd>
+          <kbd class="shift" id="187">=</kbd>
+          <kbd class="size-x operationKey" id="8">Back</kbd>
+        </div>
+
+        <div class="row-2 keyboard-row">
+          <kbd class="size-x operationKey" id="9">Tab</kbd>
+          <kbd id="81">q</kbd>
+          <kbd id="87">w</kbd>
+          <kbd id="69">e</kbd>
+          <kbd id="82">r</kbd>
+          <kbd id="84">t</kbd>
+          <kbd id="89">y</kbd>
+          <kbd id="85">u</kbd>
+          <kbd id="73">i</kbd>
+          <kbd id="79">o</kbd>
+          <kbd id="80">p</kbd>
+          <kbd class="shift" id="219">[</kbd>
+          <kbd class="shift" id="221">]</kbd>
+          <kbd class="shift" id="220">\</kbd>
+        </div>
+
+        <div class="row-3 keyboard-row">
+          <kbd class="size-x operationKey" id="20">CapsLk</kbd>
+          <kbd id="65">a</kbd>
+          <kbd id="83">s</kbd>
+          <kbd id="68">d</kbd>
+          <kbd id="70">f</kbd>
+          <kbd id="71">g</kbd>
+          <kbd id="72">h</kbd>
+          <kbd id="74">j</kbd>
+          <kbd id="75">k</kbd>
+          <kbd id="76">l</kbd>
+          <kbd class="shift" id="186">;</kbd>
+          <kbd class="shift" id="222">'</kbd>
+          <kbd class="size-x operationKey" id="13">Enter</kbd>
+        </div>
+
+        <div class="row-4 keyboard-row">
+          <kbd class="size-2x operationKey" id="16">shift</kbd>
+          <kbd id="90">z</kbd>
+          <kbd id="88">x</kbd>
+          <kbd id="67">c</kbd>
+          <kbd id="86">v</kbd>
+          <kbd id="66">b</kbd>
+          <kbd id="78">n</kbd>
+          <kbd id="77">m</kbd>
+          <kbd class="shift" id="188">,</kbd>
+          <kbd class="shift" id="190">.</kbd>
+          <kbd class="shift" id="191">/</kbd>
+          <kbd class="size-x operationKey" id="16">shift</kbd>
+        </div>
+
+        <div class="row-5 keyboard-row">
+          <kbd class="operationKey"></kbd>
+          <kbd class="operationKey"></kbd>
+          <kbd class="operationKey"></kbd>
+          <kbd class="window operationKey" id="91">⌘</kbd>
+          <kbd class="spacebar operationKey" id="32">&nbsp;</kbd>
+          <kbd class="operationKey"></kbd>
+          <kbd class="operationKey"></kbd>
+          <kbd class="operationKey"></kbd>
+          <kbd class="operationKey"></kbd>
+        </div>
+      </div>
+      <br />
+      <p class="clear-text">
+        Type shift + Backspace to delete whole text.
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
