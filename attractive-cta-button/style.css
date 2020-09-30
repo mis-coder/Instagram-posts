@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #7f0fe3;
+  --secondary-color: #440878;
+  --cubic-bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  padding: 18px 32px;
+  transition: all 0.5s var(--cubic-bezier) 0.15s;
+}
+
+button::after,
+button::before {
+  content: "";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: block;
+  z-index: -1;
+  transition: all 0.3s var(--cubic-bezier);
+}
+
+button::after {
+  background: var(--secondary-color);
+  left: 0px;
+  animation: moveAfter 2s var(--cubic-bezier) 0.5s infinite alternate;
+}
+
+@keyframes moveAfter {
+  0% {
+    transform: translate(10px, 0);
+  }
+  100% {
+    transform: translate(190px, 0);
+  }
+}
+
+button::before {
+  background: var(--primary-color);
+  left: 0px;
+  top: 0px;
+  animation: moveBefore 2s var(--cubic-bezier) 0.5s infinite alternate;
+}
+
+@keyframes moveBefore {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 50px);
+  }
+}
+
+button:hover {
+  color: #fff;
+}
+
+button:hover::after,
+button:hover::before {
+  height: 100%;
+  width: 100%;
+  border-radius: 0%;
+  animation: none;
+  top: 0;
+}
+
+button:hover::after {
+  left: 0;
+}
+
+button:hover::before {
+  left: 12px;
+  top: 12px;
+}
