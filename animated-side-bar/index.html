@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animated Side Bar</title>
+  </head>
+  <body>
+    <header>
+      <div class="site-title">
+        <a href="#">SIDE BAR</a>
+      </div>
+      <div class="toggle-icon" onclick="showMenu()">
+        <i class="material-icons">dehaze</i>
+      </div>
+    </header>
+    <div class="sidebar" id="sidebar">
+      <div class="admin">
+        <img src="img/profile.png" alt="user" />
+      </div>
+      <div class="close-menu" onclick="hideMenu()">x</div>
+      <nav>
+        <ul>
+          <li>
+            <i class="material-icons">home</i>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <i class="material-icons">person</i>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <i class="material-icons">design_services</i>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <i class="material-icons">push_pin</i>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <i class="material-icons">photo</i>
+            <a href="#">Gallery</a>
+          </li>
+          <li>
+            <i class="material-icons">email</i>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+      function showMenu() {
+        document.getElementById("sidebar").classList.add("show");
+      }
+      function hideMenu() {
+        document.getElementById("sidebar").classList.remove("show");
+      }
+    </script>
+  </body>
+</html>

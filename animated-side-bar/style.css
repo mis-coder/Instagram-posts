@@ -1,0 +1,133 @@
+:root {
+  --purple: #300032;
+  --black: #06000a;
+  --red: #c43235;
+  --grey: #e6e6e8;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  color: #fff;
+  width: 100vw;
+  height: 7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 1rem;
+}
+
+.site-title a {
+  font-family: "Lobster", cursive;
+  margin-left: 2rem;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.toggle-icon {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggle-icon:hover {
+  border: 0.2rem solid #fff;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: -25rem;
+  background-color: var(--grey);
+  height: 100%;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+}
+
+.admin img {
+  height: 10rem;
+  width: 10rem;
+  margin-top: 10rem;
+}
+
+.close-menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.close-menu:hover {
+  transform: scale(1.2);
+}
+nav {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+nav ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -80%);
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  margin: 1.7rem 0;
+}
+nav li a {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+nav li i,
+nav li a {
+  color: rgb(98, 98, 98);
+}
+nav li a:hover {
+  color: var(--black);
+}
+
+.sidebar.show {
+  right: 0rem;
+}
