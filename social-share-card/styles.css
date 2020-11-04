@@ -1,0 +1,229 @@
+/*----Global styles-----*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --light-purple: #7c6fe5;
+  --dark-purple: #4e41ad;
+  --background-color: #f1f1fa;
+  --font: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--font);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+button,
+i {
+  cursor: pointer;
+}
+
+/* container element */
+.container {
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--light-purple);
+  border-radius: 2rem;
+  box-shadow: 0rem 3rem 2rem rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* the card which is exactly covering the container */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  border-radius: inherit;
+  color: var(--dark-purple);
+  position: absolute;
+  transition: all 0.7s;
+}
+
+/* top-div in the card */
+.top-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.top-div img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 100%;
+}
+
+.top-div i {
+  font-size: 2rem;
+}
+
+/* share btn in the right of top-div */
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.share-btn i {
+  z-index: 1;
+}
+.share-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 3.5rem;
+  width: 3.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.share-btn:hover::after {
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+.share-btn.clicked::after {
+  opacity: 1;
+  animation: pulse 0.2s ease-in;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    height: 5rem;
+    width: 5rem;
+    background-color: #4e41ad52;
+    opacity: 1;
+  }
+  100% {
+    height: 3.5rem;
+    width: 3.5rem;
+    opacity: 1;
+  }
+}
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 2rem 0 0 0;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.follow-btn {
+  margin-top: 3rem;
+  background-color: transparent;
+  font-family: var(--font);
+  color: var(--dark-purple);
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  border: 0.1rem solid var(--dark-purple);
+  border-radius: 10rem;
+  padding: 0.6rem 6rem;
+  transition-delay: 0.8s;
+  transition: all 0.5s;
+}
+
+.follow-btn:focus {
+  outline: 0;
+}
+
+.follow-btn:hover {
+  background: var(--dark-purple);
+  color: #fff;
+}
+
+/* social share icons */
+.share-icons {
+  display: none;
+  position: absolute;
+  bottom: 1rem;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.share-icons div {
+  background: #fff;
+  color: var(--light-purple);
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.share-icons div:hover {
+  opacity: 0.7;
+}
+.share-icons div.clickShare {
+  opacity: 0.2;
+}
+
+.share-icons div:nth-child(2) {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.shared-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.fa-check {
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #fff;
+  color: var(--light-purple);
+  font-size: 3rem;
+}
+
+.shared-element p {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+}
